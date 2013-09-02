@@ -4,7 +4,10 @@ import pprint
 from utils import transform_datetime
 from utils import flatten
 from warnings import warn
-from django.utils import simplejson
+try:
+    import json as simplejson
+except ImportError:
+    from django.utils import simplejson
 _debug = 1
 
 
